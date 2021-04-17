@@ -1,12 +1,16 @@
 package com.assessment03;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Stack;
 
 public class DepthFirstSearch {
     HashMap<String, LinkedList<String>> adjList = new HashMap<>();
     HashMap<String, Integer> listIndex = new HashMap<>();
     Stack<String> stack = new Stack<>();
     boolean[] visited;
+    int number = 1;
 
     public DepthFirstSearch(ArrayList<String> listCountry) {
         int index = -1;
@@ -30,10 +34,12 @@ public class DepthFirstSearch {
     }
 
     private void DFSUtil(String src) {
-        System.out.println(src + " ");
+        System.out.println(number++ + ". " + src + " ");
+
         for (String s : adjList.get(src)) {
             stack.push(s);
         }
+
         while (!stack.empty()) {
             if (!visited[listIndex.get(stack.peek())]) {
                 visited[listIndex.get(stack.peek())] = true;

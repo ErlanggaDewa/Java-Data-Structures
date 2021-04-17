@@ -3,11 +3,12 @@ package com.assessment03;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Queue;
 
 public class BreadthFirstSearch {
     HashMap<String, LinkedList<String>> adjList = new HashMap<>();
     HashMap<String, Integer> listIndex = new HashMap<>();
+    LinkedList<String> queue = new LinkedList<>();
+    int number = 1;
     private boolean[] visited;
 
     public BreadthFirstSearch(ArrayList<String> listCountry) {
@@ -26,23 +27,22 @@ public class BreadthFirstSearch {
     }
 
     public void printBFS(String src) {
-        Queue<String> queue = new LinkedList<>();
-        queue.add(src);
         visited = new boolean[adjList.size()];
         visited[listIndex.get(src)] = true;
+        BFSUtil(src);
+    }
 
-//        System.out.print("Urutan BFS dari vertex " + src + " adalah : ");
+    private void BFSUtil(String src) {
+        System.out.println(number++ + ". " + src + " ");
 
-        while (queue.size() > 0) {
-            String tempVertex = queue.poll();
-//            System.out.print(tempVertex + " ");
+        queue.addAll(adjList.get(src));
 
-            for (String vertex : queue) {
-                System.out.println(vertex);
-                if (!visited[listIndex.get(src)]) {
-                    visited[listIndex.get(src)] = true;
-                    queue.add(vertex);
-                }
+        while (!queue.isEmpty()) {
+            if (!visited[listIndex.get(queue.peek())]) {
+                visited[listIndex.get(queue.peek())] = true;
+                BFSUtil(queue.pop());
+            } else {
+                queue.pop();
             }
         }
     }

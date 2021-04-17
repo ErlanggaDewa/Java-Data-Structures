@@ -101,7 +101,7 @@ public class Main {
         bfs.addEdge("Glasgow", "Manchester");
         bfs.addEdge("Glasgow", "Edinburgh");
 
-        System.out.println("\nUrutan DFS : ");
+        System.out.println("\nUrutan BFS : ");
         bfs.printBFS("London");
     }
 
