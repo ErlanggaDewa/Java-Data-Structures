@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2f88939-a889-4b56-a294-8d002ee97065" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/6706201053_Erlangga Dewa Sakti_Assessment 3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assessment 3/Assessment 3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assessment 3/src/com/aseessment03/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/out/production/6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/com/jurnal09/AdjacencyListBFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/out/production/6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/com/jurnal09/AdjacencyListBFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/out/production/6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/com/jurnal09/AdjacencyListDFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/out/production/6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/com/jurnal09/AdjacencyListDFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/out/production/6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/com/jurnal09/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/out/production/6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/com/jurnal09/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/src/com/jurnal09/AdjacencyListBFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/src/com/jurnal09/AdjacencyListBFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/src/com/jurnal09/AdjacencyListDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/src/com/jurnal09/AdjacencyListDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/src/com/jurnal09/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/src/com/jurnal09/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assessment 3/src/com/assessment03/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assessment 3/src/com/assessment03/AdjacencyListDFS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assessment 3/src/com/assessment03/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assessment 3/src/com/assessment03/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +22,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1rBgeawiQWu6HOJ0GPDaKbq4vH4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -45,6 +44,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -87,5 +87,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
