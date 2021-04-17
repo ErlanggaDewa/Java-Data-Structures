@@ -17,50 +17,7 @@ public class Main {
         vertices.add("Edinburgh");
         vertices.add("Glasgow");
 
-        DepthFirstSearch dfs = new DepthFirstSearch(vertices);
-        dfs.addEdge("London", "Salisbury");
-        dfs.addEdge("London", "Birmingham");
-
-        dfs.addEdge("Salisbury", "London");
-        dfs.addEdge("Salisbury", "Bristol");
-
-        dfs.addEdge("Bristol", "Salisbury");
-        dfs.addEdge("Bristol", "Birmingham");
-
-        dfs.addEdge("Birmingham", "London");
-        dfs.addEdge("Birmingham", "Bristol");
-        dfs.addEdge("Birmingham", "Cardiff");
-        dfs.addEdge("Birmingham", "Manchester");
-        dfs.addEdge("Birmingham", "Kingston");
-
-        dfs.addEdge("Cardiff", "Birmingham");
-
-        dfs.addEdge("Manchester", "Birmingham");
-        dfs.addEdge("Manchester", "Kingston");
-        dfs.addEdge("Manchester", "Liverpool");
-        dfs.addEdge("Manchester", "Newcastle");
-        dfs.addEdge("Manchester", "Glasgow");
-
-        dfs.addEdge("Kingston", "Birmingham");
-        dfs.addEdge("Kingston", "Manchester");
-        dfs.addEdge("Kingston", "Newcastle");
-
-        dfs.addEdge("Liverpool", "Manchester");
-
-        dfs.addEdge("Newcastle", "Manchester");
-        dfs.addEdge("Newcastle", "Kingston");
-        dfs.addEdge("Newcastle", "Edinburgh");
-
-        dfs.addEdge("Edinburgh", "Newcastle");
-        dfs.addEdge("Edinburgh", "Glasgow");
-
-        dfs.addEdge("Glasgow", "Manchester");
-        dfs.addEdge("Glasgow", "Edinburgh");
-
-        System.out.println("Urutan DFS : ");
-        dfs.printDFS("London");
-
-
+//        ! Jika Dita mengunjungi kota yang terdekat lebih dahulu
         BreadthFirstSearch bfs = new BreadthFirstSearch(vertices);
         bfs.addEdge("London", "Salisbury");
         bfs.addEdge("London", "Birmingham");
@@ -101,8 +58,52 @@ public class Main {
         bfs.addEdge("Glasgow", "Manchester");
         bfs.addEdge("Glasgow", "Edinburgh");
 
-        System.out.println("\nUrutan BFS : ");
+        System.out.println("\nUrutan jika Dita mengunjungi kota terdekat terlebih dahulu : ");
         bfs.printBFS("London");
+
+//        ! Jika Dita ingin menyusuri kota yang terjauh terlebih dahulu
+        DepthFirstSearch dfs = new DepthFirstSearch(vertices);
+        dfs.addEdge("London", "Salisbury");
+        dfs.addEdge("London", "Birmingham");
+
+        dfs.addEdge("Salisbury", "London");
+        dfs.addEdge("Salisbury", "Bristol");
+
+        dfs.addEdge("Bristol", "Salisbury");
+        dfs.addEdge("Bristol", "Birmingham");
+
+        dfs.addEdge("Birmingham", "London");
+        dfs.addEdge("Birmingham", "Bristol");
+        dfs.addEdge("Birmingham", "Cardiff");
+        dfs.addEdge("Birmingham", "Manchester");
+        dfs.addEdge("Birmingham", "Kingston");
+
+        dfs.addEdge("Cardiff", "Birmingham");
+
+        dfs.addEdge("Manchester", "Birmingham");
+        dfs.addEdge("Manchester", "Kingston");
+        dfs.addEdge("Manchester", "Liverpool");
+        dfs.addEdge("Manchester", "Newcastle");
+        dfs.addEdge("Manchester", "Glasgow");
+
+        dfs.addEdge("Kingston", "Birmingham");
+        dfs.addEdge("Kingston", "Manchester");
+        dfs.addEdge("Kingston", "Newcastle");
+
+        dfs.addEdge("Liverpool", "Manchester");
+
+        dfs.addEdge("Newcastle", "Manchester");
+        dfs.addEdge("Newcastle", "Kingston");
+        dfs.addEdge("Newcastle", "Edinburgh");
+
+        dfs.addEdge("Edinburgh", "Newcastle");
+        dfs.addEdge("Edinburgh", "Glasgow");
+
+        dfs.addEdge("Glasgow", "Manchester");
+        dfs.addEdge("Glasgow", "Edinburgh");
+
+        System.out.println("\nUrutan jika Dita menyusuri kota yang menjauh dari London : ");
+        dfs.printDFS("London");
     }
 
 }
