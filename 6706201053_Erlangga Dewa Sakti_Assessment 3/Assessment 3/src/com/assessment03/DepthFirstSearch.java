@@ -3,35 +3,38 @@ package com.assessment03;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Map;
+import java.util.Stack;
 
 public class DepthFirstSearch {
     HashMap<String, LinkedList<String>> adjList = new HashMap<>();
     HashMap<String, Integer> listIndex = new HashMap<>();
+    ArrayList<String> listUrut = new ArrayList<>();
+    Stack<String> stack = new Stack<>();
     boolean[] visited;
 
     public DepthFirstSearch(ArrayList<String> listCountry) {
         int index = -1;
         for (String list : listCountry) {
             LinkedList<String> listDest = new LinkedList<>();
+            listUrut.add(list);
             adjList.put(list, listDest);
             listIndex.put(list, ++index);
-//            System.out.println(list);
-//            System.out.println(adjList.entrySet());
-//            System.out.println(listIndex.entrySet());
         }
     }
 
     public void addEdge(String src, String dest) {
         LinkedList<String> listDest = adjList.get(src);
-        listDest.addFirst(dest);
+        listDest.add(dest);
         adjList.put(src, listDest);
+        for(String x : listDest){
+            System.out.println(x);
+        }
+        System.out.println();
     }
 
     public void printDFS() {
         visited = new boolean[adjList.size()];
-        for (Map.Entry<String, LinkedList<String>> entry : adjList.entrySet()) {
-            String src = entry.getKey();
+        for (String src : listUrut) {
             if (!visited[listIndex.get(src)]) {
                 DFSUtil(src);
             }
@@ -39,7 +42,7 @@ public class DepthFirstSearch {
     }
 
     private void DFSUtil(String src) {
-//        System.out.println(src + " ");
+        System.out.println(src + " ");
         visited[listIndex.get(src)] = true;
 
         LinkedList<String> list = adjList.get(src);
