@@ -20,18 +20,20 @@ public class Main {
 //            System.out.println(vertices.get(i));
 //        }
         DepthFirstSearch graph = new DepthFirstSearch(vertices);
-        graph.addEdge("London", "Birmingham");
         graph.addEdge("London", "Salisbury");
+        graph.addEdge("London", "Birmingham");
 
         graph.addEdge("Salisbury", "London");
         graph.addEdge("Salisbury", "Bristol");
 
-        graph.addEdge("Bristol", "Birmingham");
         graph.addEdge("Bristol", "Salisbury");
+        graph.addEdge("Bristol", "Birmingham");
 
         graph.addEdge("Birmingham", "London");
         graph.addEdge("Birmingham", "Bristol");
         graph.addEdge("Birmingham", "Cardiff");
+        graph.addEdge("Birmingham", "Manchester");
+        graph.addEdge("Birmingham", "Kingston");
 
         graph.addEdge("Cardiff", "Birmingham");
 
@@ -59,7 +61,7 @@ public class Main {
 
 
 
-        graph.printDFS();
+        graph.printDFS("London");
     }
 
 }
