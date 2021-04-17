@@ -28,25 +28,22 @@ public class BreadthFirstSearch {
     public void printBFS(String src) {
         Queue<String> queue = new LinkedList<>();
         queue.add(src);
+        visited = new boolean[adjList.size()];
         visited[listIndex.get(src)] = true;
 
-        System.out.print("Urutan BFS dari vertex " + src + " adalah : ");
+//        System.out.print("Urutan BFS dari vertex " + src + " adalah : ");
 
         while (queue.size() > 0) {
             String tempVertex = queue.poll();
-            System.out.print(tempVertex + " ");
+//            System.out.print(tempVertex + " ");
 
-            for (char character : adjList[toIndex(tempVertex)]) {
-                if (!visited[toIndex(character)]) {
-                    visited[toIndex(character)] = true;
-                    queue.add(character);
+            for (String vertex : queue) {
+                System.out.println(vertex);
+                if (!visited[listIndex.get(src)]) {
+                    visited[listIndex.get(src)] = true;
+                    queue.add(vertex);
                 }
             }
         }
     }
-
-    private int toIndex(char input) {
-        return (int) Character.toUpperCase(input) - 65;
-    }
-
 }
