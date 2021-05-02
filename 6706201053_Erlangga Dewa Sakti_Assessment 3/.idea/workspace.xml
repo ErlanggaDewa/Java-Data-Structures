@@ -3,12 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="c2f88939-a889-4b56-a294-8d002ee97065" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assessment 3/src/com/assessment03/DFS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assessment 3/src/com/assessment03/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assessment 3/src/com/assessment03/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assessment 3/com/assessment03/BreadthFirstSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assessment 3/com/assessment03/BreadthFirstSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assessment 3/com/assessment03/DFS.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assessment 3/com/assessment03/DepthFirstSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assessment 3/com/assessment03/DepthFirstSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assessment 3/com/assessment03/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assessment 3/com/assessment03/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/out/production/6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/com/jurnal09/AdjacencyListBFS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/out/production/6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/com/jurnal09/AdjacencyListDFS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/out/production/6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/com/jurnal09/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/src/com/jurnal09/AdjacencyListBFS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/src/com/jurnal09/AdjacencyListDFS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../6706201053_Erlangga Dewa Sakti_Jurnal 9 BFS dan DFS/src/com/jurnal09/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618666309881</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update">
+      <created>1618671061575</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1618671061575</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
