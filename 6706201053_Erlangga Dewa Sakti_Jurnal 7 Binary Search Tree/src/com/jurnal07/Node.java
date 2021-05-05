@@ -8,5 +8,4 @@ public class Node {
         left = right = null;
         this.key = input;
     }
-
 }

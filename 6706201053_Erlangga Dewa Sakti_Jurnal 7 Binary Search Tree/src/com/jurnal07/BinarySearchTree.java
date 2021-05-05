@@ -1,47 +1,44 @@
 package com.jurnal07;
 
-// Java program to demonstrate
-// insert operation in binary
-// search tree
 class BinarySearchTree {
 
-    Node root;
+    Node tree;
 
     BinarySearchTree() {
-        root = null;
+        tree = null;
     }
 
-    void insert(char key) {
-        root = insertRec(root, key);
+    public void insert(char key) {
+        tree = insertHelper(tree, key);
     }
 
-    Node insertRec(Node root, char key) {
+    private Node insertHelper(Node root, char input) {
 
-        if (root == null) return new Node(key);
-        if (key < root.key) root.left = insertRec(root.left, key);
-        else root.right = insertRec(root.right, key);
+        if (root == null) return new Node(input);
+        if (input < root.key) root.left = insertHelper(root.left, input);
+        else root.right = insertHelper(root.right, input);
 
         return root;
     }
 
 
-    void inorder() {
+    public void inOrder() {
         System.out.print("\nIn-Order\t: ");
-        inorderRec(root);
+        inOrderHelper(tree);
     }
 
 
-    private void inorderRec(Node root) {
+    private void inOrderHelper(Node root) {
         if (root != null) {
-            inorderRec(root.left);
+            inOrderHelper(root.left);
             System.out.print(root.key + " ");
-            inorderRec(root.right);
+            inOrderHelper(root.right);
         }
     }
 
-    void preOrder() {
+    public void preOrder() {
         System.out.print("\nPre-Order\t: ");
-        preOrderHelper(root);
+        preOrderHelper(tree);
     }
 
     private void preOrderHelper(Node root) {
@@ -52,9 +49,9 @@ class BinarySearchTree {
         }
     }
 
-    void postOrder() {
+    public void postOrder() {
         System.out.print("\nPost-Order\t: ");
-        postOrderHelper(root);
+        postOrderHelper(tree);
     }
 
     private void postOrderHelper(Node root) {
@@ -66,14 +63,14 @@ class BinarySearchTree {
     }
 
     public void search(char input) {
-        if (searchHelper(root, input) == null) System.out.println("" + input + " tidak ditemukan");
+        if (searchHelper(tree, input) == null) System.out.println("" + input + " tidak ditemukan");
         else System.out.println("\n\n" + input + " ditemukan");
     }
 
 
     public Node searchHelper(Node tree, char input) {
         if (tree == null || tree.key == input) return tree;
-        if (tree.key < input) return searchHelper(tree.right, input);
+        if (tree.key <= input) return searchHelper(tree.right, input);
         return searchHelper(tree.left, input);
     }
 
