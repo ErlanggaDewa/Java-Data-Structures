@@ -5,46 +5,32 @@ package com.jurnal07;
 // search tree
 class BinarySearchTree {
 
-    // Root of BST
     Node root;
 
-    // Constructor
     BinarySearchTree() {
         root = null;
     }
 
-    // This method mainly calls insertRec()
     void insert(char key) {
         root = insertRec(root, key);
     }
 
-    /* A recursive function to
-    insert a new key in BST */
     Node insertRec(Node root, char key) {
 
-		/* If the tree is empty,
-		return a new node */
-        if (root == null) {
-            root = new Node(key);
-            return root;
-        }
-
-        /* Otherwise, recur down the tree */
+        if (root == null) return new Node(key);
         if (key < root.key) root.left = insertRec(root.left, key);
         else root.right = insertRec(root.right, key);
 
-        /* return the (unchanged) node pointer */
         return root;
     }
 
-    // This method mainly calls InorderRec()
+
     void inorder() {
         System.out.print("\nIn-Order\t: ");
         inorderRec(root);
     }
 
-    // A utility function to
-    // do inorder traversal of BST
+
     private void inorderRec(Node root) {
         if (root != null) {
             inorderRec(root.left);
@@ -53,42 +39,42 @@ class BinarySearchTree {
         }
     }
 
-    void preorder() {
+    void preOrder() {
         System.out.print("\nPre-Order\t: ");
-        preorderRec(root);
+        preOrderHelper(root);
     }
 
-    private void preorderRec(Node root) {
+    private void preOrderHelper(Node root) {
         if (root != null) {
             System.out.print(root.key + " ");
-            preorderRec(root.left);
-            preorderRec(root.right);
+            preOrderHelper(root.left);
+            preOrderHelper(root.right);
         }
     }
 
-    void postorder() {
+    void postOrder() {
         System.out.print("\nPost-Order\t: ");
-        postorderRec(root);
+        postOrderHelper(root);
     }
 
-    private void postorderRec(Node root) {
+    private void postOrderHelper(Node root) {
         if (root != null) {
-            postorderRec(root.left);
-            postorderRec(root.right);
+            postOrderHelper(root.left);
+            postOrderHelper(root.right);
             System.out.print(root.key + " ");
         }
     }
-    /* Class containing left
-    and right child of current node
-    * and key value*/
-    static class Node {
-        char key;
-        Node left, right;
 
-        public Node(char item) {
-            key = item;
-            left = right = null;
-        }
+    public void search(char input) {
+        if (searchHelper(root, input) == null) System.out.println("" + input + " tidak ditemukan");
+        else System.out.println("\n\n" + input + " ditemukan");
     }
+
+
+    public Node searchHelper(Node tree, char input) {
+        if (tree == null || tree.key == input) return tree;
+        if (tree.key < input) return searchHelper(tree.right, input);
+        return searchHelper(tree.left, input);
+    }
+
 }
-// This code is contributed by Ankur Narain Verma

@@ -16,9 +16,11 @@ public class Main {
         tree.insert('K');
         tree.insert('J');
 
-        // print inorder traversal of the BST
         tree.inorder();
-        tree.preorder();
-        tree.postorder();
+        tree.preOrder();
+        tree.postOrder();
+
+        tree.search('K');
+        tree.search('A');
     }
 }
