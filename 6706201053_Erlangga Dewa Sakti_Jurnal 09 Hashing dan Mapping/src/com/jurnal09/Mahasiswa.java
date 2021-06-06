@@ -1,8 +1,11 @@
 package com.jurnal09;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class Mahasiswa {
+
     private String nim, kelas, namaMhs;
 
     public Mahasiswa(String nim, String kelas, String namaMhs) {
@@ -25,9 +28,7 @@ public class Mahasiswa {
         int h1 = nim.hashCode();
         int h2 = kelas.hashCode();
         int h3 = namaMhs.hashCode();
-        int h = HASH_MULTIPLIER * h1 + h2 + h3;
-        return h;
-//        return Objects.hash(nim, kelas, namaMhs);
+        return HASH_MULTIPLIER * h1 + h2 + h3;
     }
 
     @Override
@@ -37,5 +38,27 @@ public class Mahasiswa {
                 ", kelas='" + kelas + '\'' +
                 ", namaMhs='" + namaMhs + '\'' +
                 '}';
+    }
+
+    public void printData(HashMap<Mahasiswa, Integer> mapMhs) {
+        for (Map.Entry<Mahasiswa, Integer> entry : mapMhs.entrySet()) {
+            System.out.println(entry.getKey() + " nilai : " + entry.getValue());
+        }
+    }
+
+    public Double avgNilai(HashMap<Mahasiswa, Integer> mapMhs) {
+        double totalNilai = 0;
+        for (Map.Entry<Mahasiswa, Integer> entry : mapMhs.entrySet()) {
+            totalNilai += entry.getValue();
+        }
+        return totalNilai / mapMhs.size();
+    }
+
+    public Double totalNilai(HashMap<Mahasiswa, Integer> mapMhs) {
+        double totalNilai = 0;
+        for (Map.Entry<Mahasiswa, Integer> entry : mapMhs.entrySet()) {
+            totalNilai += entry.getValue();
+        }
+        return totalNilai;
     }
 }
