@@ -6,12 +6,12 @@ import java.util.Objects;
 
 public class Mahasiswa {
 
-    private String nim, kelas, namaMhs;
+    private final String namaMhs, kelas, nim;
 
     public Mahasiswa(String nim, String kelas, String namaMhs) {
-        this.nim = nim;
-        this.kelas = kelas;
         this.namaMhs = namaMhs;
+        this.kelas = kelas;
+        this.nim = nim;
     }
 
     @Override
@@ -33,11 +33,11 @@ public class Mahasiswa {
 
     @Override
     public String toString() {
-        return "Mahasiswa{" +
-                "nim='" + nim + '\'' +
-                ", kelas='" + kelas + '\'' +
-                ", namaMhs='" + namaMhs + '\'' +
-                '}';
+        return "Mahasiswa dengan {" +
+                "Nama = '" + namaMhs + '\'' +
+                ", Kelas = '" + kelas + '\'' +
+                ", NIM = '" + nim + '\'' +
+                '}' + " memiliki";
     }
 
     public void printData(HashMap<Mahasiswa, Integer> mapMhs) {

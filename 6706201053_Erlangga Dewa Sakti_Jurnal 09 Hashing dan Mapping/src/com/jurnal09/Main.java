@@ -23,8 +23,8 @@ public class Main {
 
         System.out.println("\n---- OUTPUT ----");
         mhs1.printData(mapMhs);
-        System.out.println("\nTotal nilai mahasiswa sesudah mhs3 dihapus\t\t: " + mhs1.totalNilai(mapMhs));
-        System.out.println("\nRata-rata nilai mahasiswa sesudah mhs3 dihapus\t: " + mhs1.avgNilai(mapMhs));
+        System.out.println("\nTotal nilai mahasiswa sebelum mhs3 dihapus\t\t: " + mhs1.totalNilai(mapMhs));
+        System.out.println("\nRata-rata nilai mahasiswa sebelum mhs3 dihapus\t: " + mhs1.avgNilai(mapMhs));
 
 //        ! Hapus object mhs3 dari hashmap
         mapMhs.remove(mhs3);
