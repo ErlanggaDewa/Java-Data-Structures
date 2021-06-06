@@ -21,7 +21,13 @@ public class Mahasiswa {
 
     @Override
     public int hashCode() {
-        return Objects.hash(nim, kelas, namaMhs);
+        final int HASH_MULTIPLIER = 7;
+        int h1 = nim.hashCode();
+        int h2 = kelas.hashCode();
+        int h3 = namaMhs.hashCode();
+        int h = HASH_MULTIPLIER * h1 + h2 + h3;
+        return h;
+//        return Objects.hash(nim, kelas, namaMhs);
     }
 
     @Override
